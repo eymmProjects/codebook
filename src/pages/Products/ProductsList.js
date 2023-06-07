@@ -6,14 +6,13 @@ import { useTitle } from "../../hooks/useTitle";
 import { useFilter } from "../../context";
 
 export const ProductsList = () => {
-  const { productList } = useFilter();
+  const { products, initialProductList } = useFilter();
   const [show, setShow] = useState(false);
-  const [products, setProducts] = useState([]);
   const search = useLocation().search;
   const searchTerm = new URLSearchParams(search).get("q");
   useTitle("Explore Ebooks Collection");
 
-  console.log(productList);
+  // console.log(productList);
 
   useEffect(() => {
     async function fetchProducts() {
@@ -23,7 +22,7 @@ export const ProductsList = () => {
         }`
       );
       const data = await response.json();
-      setProducts(data);
+      initialProductList(data);
     }
     fetchProducts();
   }, []);
