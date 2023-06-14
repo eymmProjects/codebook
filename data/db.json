@@ -244,6 +244,12 @@
       "password": "$2a$10$CmO/7M8JLaTK8GRtr.wPN.FqFfwtr9q99oZqJ5BL53SA09hC..oFW",
       "name": "test1",
       "id": 1
+    },
+    {
+      "email": "test2@1234",
+      "password": "$2a$10$2Nx.aqHcEyPyyTyRhK7NPuJnlLnqBS7UqZVVkq05mIcDaMip4ZMYm",
+      "name": "test2",
+      "id": 2
     }
   ]
 }
